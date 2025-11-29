@@ -9,11 +9,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Quran Verse Text */}
         <div className="absolute inset-0 flex items-center justify-center md:px-30 px-10 text-center font-tajawal ">
           <h2 className="text-white text-2xl md:text-4xl font-semibold flex flex-col gap-6">
             وَلَقَدْ يَسَّرْنَا ٱلْقُرْءَانَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ

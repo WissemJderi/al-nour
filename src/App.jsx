@@ -8,21 +8,24 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Features from "./components/Features";
+import React from "react";
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Navbar />
-      <Hero />
+      <div className="md:mx-60">
+        <Hero />
+        <CTA />
+      </div>
       {/* <AboutUs /> */}
-      {/* <CTA /> */}
       {/* <Courses /> */}
       {/* <Features /> */}
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}
-    </>
+    </React.Fragment>
   );
 }
 
