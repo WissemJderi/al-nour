@@ -2,7 +2,7 @@ import React from "react";
 const Hero = () => {
   return (
     <React.Fragment>
-      <section className="relative mx-auto md:my-30 max-w-5xl h-[500px] overflow-hidden">
+      <section className="relative md:my-30 h-[500px] overflow-hidden">
         <img
           src="/hero-mosque.webp"
           alt="Mosque"

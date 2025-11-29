@@ -14,11 +14,11 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <div className="md:mx-60">
+      <div className="md:mx-80 flex flex-col text-center">
         <Hero />
         <CTA />
+        <AboutUs />
       </div>
-      {/* <AboutUs /> */}
       {/* <Courses /> */}
       {/* <Features /> */}
       {/* <Pricing /> */}
