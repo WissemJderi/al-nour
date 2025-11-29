@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const liStyle = "hover:text-accent transition cursor-pointer";
   return (
-    <nav className="w-full bg-primary text-white py-4 px-6 flex items-center md:justify-around justify-between">
+    <nav className="w-full bg-primary text-white py-4 px-6 flex items-center md:justify-around justify-between fixed top-0 left-0 z-50">
       <h1 className="text-accent font-bold text-2xl cursor-pointer">AL-Nour</h1>
 
       <ul className="hidden md:flex flex-row gap-8 text-lg">
