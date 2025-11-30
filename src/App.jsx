@@ -3,6 +3,8 @@ import Courses from "./components/Courses";
 import CTA from "./components/CTA";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+
+import Teachers from "./components/Teachers.jsx";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -18,13 +20,16 @@ function App() {
         <Hero />
         <CTA />
         <AboutUs />
+        <Courses />
+        <div>
+          <Teachers />
+        </div>
+        <Pricing />
+        <Testimonials />
+        <Contact />
       </div>
-      {/* <Courses /> */}
+      <Footer />
       {/* <Features /> */}
-      {/* <Pricing /> */}
-      {/* <Testimonials /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
     </React.Fragment>
   );
 }

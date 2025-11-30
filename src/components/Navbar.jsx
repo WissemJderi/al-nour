@@ -9,12 +9,24 @@ const Navbar = () => {
       <h1 className="text-accent font-bold text-2xl cursor-pointer">AL-Nour</h1>
 
       <ul className="hidden md:flex flex-row gap-8 text-lg">
-        <li className={`${liStyle}`}>Home</li>
-        <li className={`${liStyle}`}>About Us</li>
-        <li className={`${liStyle}`}>Courses</li>
-        <li className={`${liStyle}`}>Teachers</li>
-        <li className={`${liStyle}`}>Pricing</li>
-        <li className={`${liStyle}`}>Contact</li>
+        <li className={liStyle}>
+          <a href="#">Home</a>
+        </li>
+        <li className={liStyle}>
+          <a href="#about">About Us</a>
+        </li>
+        <li className={liStyle}>
+          <a href="#courses">Courses</a>
+        </li>
+        <li className={liStyle}>
+          <a href="#teachers">Teachers</a>
+        </li>
+        <li className={liStyle}>
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li className={liStyle}>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
 
       <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -23,12 +35,66 @@ const Navbar = () => {
 
       {open && (
         <ul className="absolute top-16 left-0 w-full bg-primary flex flex-col items-center gap-6 py-6 text-lg md:hidden border-t border-white/20">
-          <li className="hover:text-accent transition">Home</li>
-          <li className="hover:text-accent transition">About Us</li>
-          <li className="hover:text-accent transition">Courses</li>
-          <li className="hover:text-accent transition">Teachers</li>
-          <li className="hover:text-accent transition">Pricing</li>
-          <li className="hover:text-accent transition">Contact</li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#about"
+            >
+              About Us
+            </a>
+          </li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#courses"
+            >
+              Courses
+            </a>
+          </li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#teachers"
+            >
+              Teachers
+            </a>
+          </li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#pricing"
+            >
+              Pricing
+            </a>
+          </li>
+          <li className="hover:text-accent transition">
+            <a
+              onClick={() => {
+                setOpen(!open);
+              }}
+              href="#contact"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       )}
     </nav>
