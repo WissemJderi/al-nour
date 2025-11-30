@@ -5,21 +5,21 @@ const Testimonials = () => {
       role: "Student, Beginner Level",
       feedback:
         "AL-NOUR has helped me start my Qur’an journey with confidence. The teachers are patient and supportive.",
-      image: "/student1.svg",
+      image: "/sheikh.svg",
     },
     {
       name: "Fatimah Zahra",
       role: "Parent of Student",
       feedback:
         "My son enjoys every class. The institute makes learning Qur’an engaging and accessible from home.",
-      image: "/student2.svg",
+      image: "/woman.svg",
     },
     {
       name: "Omar Khalid",
       role: "Advanced Student",
       feedback:
         "I was able to complete my Hifz with guidance from AL-NOUR. Their dedication is unmatched.",
-      image: "/student3.svg",
+      image: "/sheikh.svg",
     },
   ];
   return (
