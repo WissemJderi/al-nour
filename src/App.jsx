@@ -21,7 +21,7 @@ function App() {
         <CTA />
         <AboutUs />
         <Courses />
-        <div>
+        <div className="bg-gray-50 py-16">
           <Teachers />
         </div>
         <Pricing />

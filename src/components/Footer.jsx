@@ -41,7 +41,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="text-xl font-semibold text-white mb-4">Contact</h3>
             <ul className="space-y-2 text-sm">
@@ -65,7 +64,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
           © {new Date().getFullYear()} AL-NOUR Quran Institute. All rights
           reserved.

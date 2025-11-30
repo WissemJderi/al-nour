@@ -21,7 +21,7 @@ const Hero = () => {
           </h2>
         </div>
       </section>
-      <div className="my-10 font-medium text-center flex flex-col gap-6">
+      <div className="bg-gray-50 py-16 my-10 font-medium text-center flex flex-col gap-6">
         <h1 className="text-4xl">
           Learn the Qur’an with certified teachers — anytime, anywhere.
         </h1>

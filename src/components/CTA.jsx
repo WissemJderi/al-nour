@@ -30,7 +30,7 @@ const CTA = () => {
     );
   });
   return (
-    <div>
+    <div className="bg-gray-50 py-16">
       <ul className="flex md:flex-row flex-col justify-around md:mx-30 mx-10 gap-6 md:my-20 my-10">
         {ctaCards}
       </ul>

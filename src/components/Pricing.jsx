@@ -34,7 +34,10 @@ const Pricing = () => {
   return (
     <section id="pricing" className="bg-gray-50 py-16 font-tajawal">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Pricing Plans</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Pricing Plans
+        </h2>
+
         <p className="text-gray-600 mb-12">
           Choose the plan that best fits your Qur’an learning journey.
         </p>

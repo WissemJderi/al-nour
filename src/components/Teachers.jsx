@@ -38,9 +38,11 @@ const Teachers = () => {
   return (
     <div
       id="teachers"
-      className="font-tajawal font-medium flex flex-col gap-8 w-full max-w-4xl mx-auto py-10"
+      className="font-tajawal   font-medium flex flex-col gap-8 w-full max-w-4xl mx-auto"
     >
-      <h1 className="text-4xl">Our Teachers</h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        Our Teachers
+      </h1>
       <div>
         <Swiper
           modules={[Navigation]}
