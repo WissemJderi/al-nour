@@ -28,7 +28,7 @@ This project demonstrates clean component architecture, responsive design, and i
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/alnour-quran-institute.git
+   git clone https://github.com/WissemJderi/al-nour
    ```
    
 2. Install dependencies:
