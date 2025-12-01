@@ -34,7 +34,7 @@ const Pricing = () => {
   return (
     <section id="pricing" className="bg-gray-50 py-16 font-tajawal">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
           Pricing Plans
         </h2>
 
@@ -42,7 +42,7 @@ const Pricing = () => {
           Choose the plan that best fits your Qur’an learning journey.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3">
           {plans.map((plan, idx) => (
             <div
               key={idx}
@@ -57,7 +57,7 @@ const Pricing = () => {
               <p className="text-gray-600 mb-6">{plan.description}</p>
               <ul className="text-gray-700 flex-1 mb-6 space-y-2">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2">
+                  <li key={i} className="flex items-center gap-2 text-left">
                     <span className="text-accent">✔</span> {feature}
                   </li>
                 ))}

@@ -9,27 +9,25 @@ import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Features from "./components/Features";
 import React from "react";
 
 function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <div className="md:mx-80 flex flex-col text-center">
+      <main className="flex flex-col text-center mx-4 sm:mx-8 lg:mx-20 xl:mx-60">
         <Hero />
         <CTA />
         <AboutUs />
         <Courses />
-        <div className="bg-gray-50 py-16">
+        <section className="bg-gray-50 py-12 md:py-16">
           <Teachers />
-        </div>
+        </section>
         <Pricing />
         <Testimonials />
         <Contact />
-      </div>
+      </main>
       <Footer />
-      {/* <Features /> */}
     </React.Fragment>
   );
 }

@@ -6,7 +6,14 @@ const Navbar = () => {
   const liStyle = "hover:text-accent transition cursor-pointer";
   return (
     <nav className="w-full bg-primary text-white py-4 px-6 flex items-center md:justify-around justify-between fixed top-0 left-0 z-50">
-      <h1 className="text-accent font-bold text-2xl cursor-pointer">AL-Nour</h1>
+      <h1 className="text-accent font-bold text-2xl cursor-pointer flex items-center gap-2">
+        <img
+          src="/quran.svg"
+          alt="Qur’an icon"
+          className="w-6 h-6 inline-block filter invert brightness-0"
+        />
+        AL-Nour
+      </h1>
 
       <ul className="hidden md:flex flex-row gap-8 text-lg">
         <li className={liStyle}>
