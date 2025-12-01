@@ -13,15 +13,24 @@ const Courses = () => {
     );
   });
   return (
-    <div
+    <section
       id="courses"
-      className="font-tajawal bg-gray-50 py-16 font-medium flex flex-col gap-4 lg:px-10 px-10"
+      className="font-tajawal bg-gray-50 py-16 font-medium flex flex-col gap-4 px-10 lg:px-10"
     >
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
         Our Courses
       </h1>
-      <ul className="grid lg:grid-cols-2 grid-cols-1  gap-6">{courseList}</ul>
-    </div>
+      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {coursesData.map(({ title, image, description }) => (
+          <CourseCard
+            key={title}
+            image={image}
+            title={title}
+            description={description}
+          />
+        ))}
+      </ul>
+    </section>
   );
 };
 

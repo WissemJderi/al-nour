@@ -22,45 +22,39 @@ const Testimonials = () => {
       image: "/sheikh.svg",
     },
   ];
-  return (
-    <div>
-      {" "}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            What Our Students Say
-          </h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Hear from students and parents who have experienced the journey of
-            Qur’an learning with AL-NOUR.
-          </p>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((t, idx) => (
-              <div
-                key={idx}
-                className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center"
-              >
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-20 h-20 rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {t.name}
-                </h3>
-                <p className="text-sm text-accent mb-3 font-semibold">
-                  {t.role}
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  "{t.feedback}"
-                </p>
-              </div>
-            ))}
-          </div>
+  return (
+    <section className="bg-gray-50 py-16" id="testimonials">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          What Our Students Say
+        </h2>
+        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+          Hear from students and parents who have experienced the journey of
+          Qur’an learning with AL-NOUR.
+        </p>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {testimonials.map(({ name, role, feedback, image }) => (
+            <article
+              key={name}
+              className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center hover:shadow-lg transition"
+            >
+              <img
+                src={image}
+                alt={name}
+                className="w-20 h-20 rounded-full mb-4 object-cover"
+              />
+              <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+              <p className="text-sm text-accent mb-3 font-semibold">{role}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                "{feedback}"
+              </p>
+            </article>
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

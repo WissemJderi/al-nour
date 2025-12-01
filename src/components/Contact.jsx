@@ -6,17 +6,20 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thank you for contacting us!");
+    setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
   };
+
   return (
     <section className="bg-gray-50 py-16" id="contact">
       <div className="max-w-3xl mx-auto px-6">
@@ -30,47 +33,60 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-md rounded-lg p-8 space-y-6"
+          className="bg-white shadow-md hover:shadow-lg transition rounded-lg p-8 space-y-6"
         >
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Name
             </label>
             <input
+              id="name"
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+              minLength={2}
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Email
             </label>
             <input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Message
             </label>
             <textarea
+              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               required
               rows="4"
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+              className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             ></textarea>
           </div>
 
@@ -80,6 +96,12 @@ const Contact = () => {
           >
             Send Message
           </button>
+
+          {submitted && (
+            <p className="text-primary text-center font-medium mt-4">
+              Thank you for contacting us! We’ll reply soon.
+            </p>
+          )}
         </form>
       </div>
     </section>

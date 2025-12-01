@@ -7,14 +7,14 @@ const CTA = () => {
       description:
         "Begin your Qur’an journey today with certified, patient teachers guiding you step by step. Perfect for beginners, kids, and adults.",
       buttonTxt: "Start Now",
-      to: "contact",
+      to: "#contact",
     },
     {
       title: "View Courses",
       description:
         "Explore all our programs — from recitation and tajwīd to memorization and Arabic. Find the right course for your goals.",
       buttonTxt: "Browse Courses",
-      to: "courses",
+      to: "#courses",
     },
   ];
 

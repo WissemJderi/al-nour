@@ -54,8 +54,8 @@ const Teachers = () => {
             1024: { slidesPerView: 2 },
           }}
         >
-          {teachers.map((teacher, idx) => (
-            <SwiperSlide key={idx}>
+          {teachers.map((teacher) => (
+            <SwiperSlide key={teacher.name}>
               <div className="bg-white shadow-md overflow-hidden">
                 <img
                   src={teacher.image}

@@ -31,6 +31,7 @@ const Pricing = () => {
       ],
     },
   ];
+
   return (
     <section id="pricing" className="bg-gray-50 py-16 font-tajawal">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -43,21 +44,22 @@ const Pricing = () => {
         </p>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {plans.map((plan, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col"
+          {plans.map(({ name, price, description, features }) => (
+            <article
+              key={name}
+              className="bg-white rounded-xl shadow-md p-6 flex flex-col hover:shadow-lg transition"
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {plan.name}
+                {name}
               </h3>
-              <p className="text-2xl font-bold text-accent mb-4">
-                {plan.price}
-              </p>
-              <p className="text-gray-600 mb-6">{plan.description}</p>
+              <p className="text-2xl font-bold text-accent mb-4">{price}</p>
+              <p className="text-gray-600 mb-6">{description}</p>
               <ul className="text-gray-700 flex-1 mb-6 space-y-2">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-left">
+                {features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-2 text-left"
+                  >
                     <span className="text-accent">✔</span> {feature}
                   </li>
                 ))}
@@ -65,7 +67,7 @@ const Pricing = () => {
               <button className="bg-accent hover:bg-hover-accent cursor-pointer text-white font-semibold py-2 px-4 rounded-lg transition">
                 Enroll Now
               </button>
-            </div>
+            </article>
           ))}
         </div>
       </div>
