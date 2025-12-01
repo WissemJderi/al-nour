@@ -3,6 +3,14 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const links = [
+    { href: "#", label: "Home" },
+    { href: "#about", label: "About Us" },
+    { href: "#courses", label: "Courses" },
+    { href: "#teachers", label: "Teachers" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "#contact", label: "Contact" },
+  ];
   const liStyle = "hover:text-accent transition cursor-pointer";
   return (
     <nav className="w-full bg-primary text-white py-4 px-6 flex items-center md:justify-around justify-between fixed top-0 left-0 z-50">
@@ -16,24 +24,11 @@ const Navbar = () => {
       </h1>
 
       <ul className="hidden md:flex flex-row gap-8 text-lg">
-        <li className={liStyle}>
-          <a href="#">Home</a>
-        </li>
-        <li className={liStyle}>
-          <a href="#about">About Us</a>
-        </li>
-        <li className={liStyle}>
-          <a href="#courses">Courses</a>
-        </li>
-        <li className={liStyle}>
-          <a href="#teachers">Teachers</a>
-        </li>
-        <li className={liStyle}>
-          <a href="#pricing">Pricing</a>
-        </li>
-        <li className={liStyle}>
-          <a href="#contact">Contact</a>
-        </li>
+        {links.map(({ href, label }) => (
+          <li key={label} className={liStyle}>
+            <a href={href}>{label}</a>
+          </li>
+        ))}
       </ul>
 
       <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -42,66 +37,16 @@ const Navbar = () => {
 
       {open && (
         <ul className="absolute top-16 left-0 w-full bg-primary flex flex-col items-center gap-6 py-6 text-lg md:hidden border-t border-white/20">
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#"
-            >
-              Home
-            </a>
-          </li>
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#about"
-            >
-              About Us
-            </a>
-          </li>
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#courses"
-            >
-              Courses
-            </a>
-          </li>
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#teachers"
-            >
-              Teachers
-            </a>
-          </li>
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#pricing"
-            >
-              Pricing
-            </a>
-          </li>
-          <li className="hover:text-accent transition">
-            <a
-              onClick={() => {
-                setOpen(!open);
-              }}
-              href="#contact"
-            >
-              Contact
-            </a>
-          </li>
+          {links.map(({ href, label }) => (
+            <li key={label} className={liStyle}>
+              <a
+                href={href}
+                onClick={() => setOpen(false)} // closes menu on click
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
       )}
     </nav>
