@@ -18,23 +18,20 @@ const CTA = () => {
     },
   ];
 
-  const ctaCards = ctaData.map((card, key) => {
-    return (
-      <CTACard
-        title={card.title}
-        description={card.description}
-        buttonTxt={card.buttonTxt}
-        key={key}
-        to={card.to}
-      />
-    );
-  });
   return (
-    <div className="bg-gray-50 py-16">
-      <ul className="flex md:flex-row flex-col justify-around md:mx-30 mx-10 gap-6 md:my-20 my-10">
-        {ctaCards}
+    <section className="bg-gray-50 py-16">
+      <ul className="flex flex-col md:flex-row justify-around gap-6 mx-6 md:mx-20 lg:mx-30 my-10 md:my-20">
+        {ctaData.map(({ title, description, buttonTxt, to }) => (
+          <CTACard
+            key={title}
+            title={title}
+            description={description}
+            buttonTxt={buttonTxt}
+            to={to}
+          />
+        ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

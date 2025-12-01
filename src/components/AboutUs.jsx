@@ -1,4 +1,20 @@
 const AboutUs = () => {
+  const features = [
+    {
+      title: "Accessible",
+      description:
+        "Learn from anywhere in the world with flexible online classes.",
+    },
+    {
+      title: "Authentic",
+      description:
+        "Guided by trusted teachers using authentic Islamic methodology.",
+    },
+    {
+      title: "Excellence",
+      description: "Focused on quality teaching with sincerity and dedication.",
+    },
+  ];
   return (
     <section className="bg-gray-50 py-16 font-tajawal" id="about">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -13,30 +29,17 @@ const AboutUs = () => {
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="bg-white shadow-md p-6">
-            <h3 className="text-lg font-semibold text-accent mb-2">
-              Accessible
-            </h3>
-            <p className="text-sm text-gray-800">
-              Learn from anywhere in the world with flexible online classes.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-6">
-            <h3 className="text-lg font-semibold text-accent mb-2">
-              Authentic
-            </h3>
-            <p className="text-sm text-gray-800">
-              Guided by trusted teachers using authentic Islamic methodology.
-            </p>
-          </div>
-          <div className="bg-white shadow-md p-6">
-            <h3 className="text-lg font-semibold text-accent mb-2">
-              Excellence
-            </h3>
-            <p className="text-sm text-gray-800">
-              Focused on quality teaching with sincerity and dedication.
-            </p>
-          </div>
+          {features.map(({ title, description }) => (
+            <div
+              key={title}
+              className="bg-white shadow-md p-6 rounded-lg hover:shadow-lg transition"
+            >
+              <h3 className="text-lg font-semibold text-accent mb-2">
+                {title}
+              </h3>
+              <p className="text-sm text-gray-800">{description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
