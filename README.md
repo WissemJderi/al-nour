@@ -29,11 +29,16 @@ This project demonstrates clean component architecture, responsive design, and i
 1. Clone the repo:
    ```bash
    git clone https://github.com/yourusername/alnour-quran-institute.git
-
+   ```
+   
+2. Install dependencies:
+   ```bash
    npm install
-
+   ```
+   
+3. Run the development server:
+   ```bash
    npm run dev
-
    ```
 
 
