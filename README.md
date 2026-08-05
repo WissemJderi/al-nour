@@ -16,7 +16,7 @@ This project demonstrates clean component architecture, responsive design, and i
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **React** (functional components, hooks)
 - **Tailwind CSS** (responsive utilities, custom styles)
